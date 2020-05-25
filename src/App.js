@@ -5,9 +5,9 @@ import "./App.css";
 
 function App() {
   //TODO: STEP 2 - Establish your applictaion's state with some useState hooks.  You'll need one for the home score and another for the away score.
-    const [homeScore, increment_h_Score] = useState(24);
-    const [awayScore, increment_a_Score] = useState(7);
-    
+  const [homeScore, increment_h_Score] = useState(24);
+  const [awayScore, increment_a_Score] = useState(7);
+
   return (
     <div className="container">
       <section className="scoreboard">
@@ -28,14 +28,33 @@ function App() {
       </section>
       <section className="buttons">
         <div className="homeButtons">
-
           {/* TODO STEP 4 - Now we need to attach our state setter functions to click listeners. */}
-          <button className="homeButtons__touchdown" onClick={ ()=> increment_h_Score(homeScore + 7) }>Home Touchdown</button>
-          <button className="homeButtons__fieldGoal" onClick={ ()=> increment_h_Score(homeScore + 3) }>Home Field Goal</button>
+          <button
+            className="homeButtons__touchdown"
+            onClick={() => increment_h_Score(homeScore + 7)}
+          >
+            Home Touchdown
+          </button>
+          <button
+            className="homeButtons__fieldGoal"
+            onClick={() => increment_h_Score(homeScore + 3)}
+          >
+            Home Field Goal
+          </button>
         </div>
         <div className="awayButtons">
-          <button className="awayButtons__touchdown" onClick={ ()=> increment_a_Score(awayScore + 7) }>Away Touchdown</button>
-          <button className="awayButtons__fieldGoal" onClick={ ()=> increment_a_Score(awayScore + 3) }>Away Field Goal</button>
+          <button
+            className="awayButtons__touchdown"
+            onClick={() => increment_a_Score(awayScore + 7)}
+          >
+            Away Touchdown
+          </button>
+          <button
+            className="awayButtons__fieldGoal"
+            onClick={() => increment_a_Score(awayScore + 3)}
+          >
+            Away Field Goal
+          </button>
         </div>
       </section>
     </div>
